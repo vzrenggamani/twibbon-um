@@ -4,8 +4,6 @@ const path = require('path');
 const app = express();
 const exphbs = require('express-handlebars');
 const http = require('http');
-const { json } = require('body-parser');
-const twibbonData = 
 
 app.set('views', path.join(__dirname, 'src'));
 app.engine('hbs', exphbs({

@@ -1,4 +1,4 @@
-let base_img = new Image();
+const base_img = new Image();
 
 function downloadImage() {
   const selected = $("[name='twibbonType']:checked").val();
@@ -41,7 +41,7 @@ function generate() {
         posY.max = uploadedImage.height;
         posX.min = uploadedImage.width - uploadedImage.width * 2;
         posY.min = uploadedImage.height - uploadedImage.height * 2;
-        let ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, 1080, 1080);
         ctx.drawImage(
           uploadedImage,
