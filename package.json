@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "node .",
+    "server": "pm2 start index.js --watch && pm2 monit"
   },
   "author": "Brian & Rengga",
   "private": true,

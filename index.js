@@ -5,6 +5,20 @@ const app = express();
 const exphbs = require('express-handlebars');
 const http = require('http');
 
+/* Modify theese blocks to add new twibbon to the app */
+twibbonData = {
+  twibbon: [
+    {
+      name: 'Test Twibbon',
+      image: 'testtwibbon'
+    },
+    {
+      name: 'Ordinary twibbon',
+      image: 'ordinarytwibbon'
+    }
+  ]
+}
+
 app.set('views', path.join(__dirname, 'src'));
 app.engine('hbs', exphbs({
   defaultLayout: 'main',
@@ -21,18 +35,7 @@ setInterval(() => {
 
 app.get('/', (req, res) => {
   console.log(Date.now() + ' Ping Received');
-  res.status(200).render('index', {
-    twibbon: [
-      {
-        name: 'Test Twibbon',
-        image: 'testtwibbon'
-      },
-      {
-        name: 'Ordinary twibbon',
-        image: 'ordinarytwibbon'
-      }
-    ]
-  });
+  res.status(200).render('index', twibbonData);
 });
 
 app.listen(3000, console.log('Listening on port 3000!'));
