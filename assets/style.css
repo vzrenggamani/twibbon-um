@@ -1,10 +1,10 @@
 html {
-  margin: 4rem 1rem 4rem .5rem
+  margin: 4rem 1rem 4rem 0.5rem;
 }
 
 .custom-file,
 #inputGambar,
-.upload-btn {
+.upload-btn { 
   cursor: pointer;
 }
 
@@ -24,7 +24,7 @@ canvas {
 
 .head-text,
 .subhead-text {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .head-text {
@@ -47,22 +47,18 @@ canvas {
   font-weight: 700;
 }
 
-.btn-cta {
-  display: inline-flex;
-}
-
 .spacer {
-    margin: 1.2rem 0rem 0rem 0rem
+  margin: 1.2rem 0rem 0rem 0rem;
 }
 
 h3 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .box-file {
-    margin-top: 1rem
+  margin-top: 1rem;
 }
 
 .wrapper {
-    margin-left: 1rem
+  margin-left: 1rem;
 }
