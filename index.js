@@ -1,29 +1,33 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+
 const app = express();
 const exphbs = require('express-handlebars');
 const http = require('http');
 
 /* Modify theese blocks to add new twibbon to the app */
-twibbonData = {
+const twibbonData = {
   twibbon: [
     {
       name: 'Test Twibbon',
-      image: 'testtwibbon'
+      image: 'testtwibbon',
     },
     {
       name: 'Ordinary twibbon',
-      image: 'ordinarytwibbon'
-    }
-  ]
-}
+      image: 'ordinarytwibbon',
+    },
+  ],
+};
 
 app.set('views', path.join(__dirname, 'src'));
-app.engine('hbs', exphbs({
-  defaultLayout: 'main',
-  extname: '.hbs'
-}));
+app.engine(
+  'hbs',
+  exphbs({
+    defaultLayout: 'main',
+    extname: '.hbs',
+  })
+);
 app.set('view engine', 'hbs');
 app.use('/assets', express.static('assets'));
 app.use(bodyParser.json());
@@ -34,7 +38,7 @@ setInterval(() => {
 }, 250000);
 
 app.get('/', (req, res) => {
-  console.log(Date.now() + ' Ping Received');
+  console.log(`${Date.now()} Ping Received`);
   res.status(200).render('index', twibbonData);
 });
 

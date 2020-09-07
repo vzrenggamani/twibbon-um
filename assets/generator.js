@@ -1,4 +1,4 @@
-const base_img = new Image();
+const baseImg = new Image();
 
 function downloadImage() {
   const selected = $("[name='twibbonType']:checked").val();
@@ -18,8 +18,8 @@ function downloadImage() {
 function generate() {
   $('.pilih-twibbon').hide();
   const selected = $("[name='twibbonType']:checked").val();
-  base_img.src = `./assets/${selected}.png`;
-  base_img.onload = function () {
+  baseImg.src = `./assets/${selected}.png`;
+  baseImg.onload = function () {
     $('#generated').css('height', '360px');
     const imageFile = document.getElementById('inputGambar').files[0];
     const canvas = document.getElementById('generated');
@@ -50,7 +50,7 @@ function generate() {
           ((1080 * uploadedImage.width) / uploadedImage.height) * ukuran.value,
           1080 * ukuran.value
         );
-        ctx.drawImage(base_img, 0, 0);
+        ctx.drawImage(baseImg, 0, 0);
         $('.download-btn').show();
         $('.slider').show();
       };
