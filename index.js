@@ -5,20 +5,7 @@ const path = require('path');
 const app = express();
 const exphbs = require('express-handlebars');
 const http = require('http');
-
-/* Modify theese blocks to add new twibbon to the app */
-const twibbonData = {
-  twibbon: [
-    {
-      name: 'Test Twibbon',
-      image: 'testtwibbon',
-    },
-    {
-      name: 'Ordinary twibbon',
-      image: 'ordinarytwibbon',
-    },
-  ],
-};
+const twibbonData = require('./twibbon.js');
 
 app.set('views', path.join(__dirname, 'src'));
 app.engine(
