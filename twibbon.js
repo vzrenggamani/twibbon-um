@@ -1,12 +1,8 @@
 const twibbon = [
   {
-    name: 'Test Twibbon',
-    image: 'testtwibbon',
-  },
-  {
-    name: 'Ordinary twibbon',
-    image: 'ordinarytwibbon',
-  },
+    name: 'Twibbon Univ',
+    image: 'twibbonuniv',
+  }
 ];
 
 exports.twibbon = twibbon;
