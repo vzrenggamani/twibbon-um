@@ -1,8 +1,3 @@
-const twibbon = [
-  {
-    name: 'Twibbon Univ',
-    image: 'twibbonuniv',
-  }
-];
+const twibbon = [];
 
 exports.twibbon = twibbon;
